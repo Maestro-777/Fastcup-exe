@@ -1,0 +1,45 @@
+{
+  "name": "fastcup-desktop",
+  "version": "1.0.0",
+  "description": "Desktop launcher for CS2 Fastcup",
+  "main": "src/main.cjs",
+  "author": "Maestro-777",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis",
+    "dist:dir": "electron-builder --win dir"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "net.fastcup.desktop",
+    "productName": "Fastcup",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "Fastcup-Setup-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Fastcup",
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}
