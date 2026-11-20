@@ -2,7 +2,7 @@
   "name": "fastcup-desktop",
   "version": "1.0.0",
   "description": "Desktop launcher for CS2 Fastcup",
-  "main": "src/main.cjs",
+  "main": "main.cjs",
   "author": "Maestro-777",
   "license": "UNLICENSED",
   "scripts": {
@@ -21,7 +21,7 @@
       "output": "release"
     },
     "files": [
-      "src/**/*",
+      "main.cjs",
       "package.json"
     ],
     "win": {
