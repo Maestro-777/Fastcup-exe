@@ -1,0 +1,1 @@
+// Fastcup desktop entry point
